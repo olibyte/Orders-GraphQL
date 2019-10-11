@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Types\**" />
+    <EmbeddedResource Remove="Types\**" />
+    <None Remove="Types\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Schema\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="3.0.0-preview-1275" />
+    <PackageReference Include="System.Reactive" Version="4.2.0" />
+  </ItemGroup>
+
+</Project>
