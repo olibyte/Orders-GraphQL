@@ -10,6 +10,7 @@ namespace Orders.Services
     public class CustomerService : ICustomerService
     {
         private IList<Customer> _customers;
+
         public CustomerService()
         {
             _customers = new List<Customer>();
@@ -18,6 +19,7 @@ namespace Orders.Services
             _customers.Add(new Customer(3, "Topsy Turvy"));
             _customers.Add(new Customer(4, "Leaf & Mortar"));
         }
+
         public Customer GetCustomerById(int id)
         {
             return GetCustomerByIdAsync(id).Result;

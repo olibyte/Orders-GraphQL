@@ -12,7 +12,7 @@ namespace Orders.Models
             Name = name;
         }
 
-        public int Id { get; private set; }
+        public int Id { get; }
         public string Name { get; set; }
     }
 }

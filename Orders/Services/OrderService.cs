@@ -10,6 +10,7 @@ namespace Orders.Services
     public class OrderService : IOrderService
     {
         private IList<Order> _orders;
+
         public OrderService()
         {
             _orders = new List<Order>();
@@ -18,6 +19,7 @@ namespace Orders.Services
             _orders.Add(new Order("3000", "500 Stickers", DateTime.Now.AddHours(2), 3, "2D542571-EF99-4786-AEB5-C997D82E57C7"));
             _orders.Add(new Order("4000", "10 Posters", DateTime.Now.AddHours(2), 4, "2D542572-EF99-4786-AEB5-C997D82E57C7"));
         }
+
         public Task<Order> GetOrderByIdAsync(string id)
         {
             return Task.FromResult(_orders.Single(o => Equals(o.Id, id)));

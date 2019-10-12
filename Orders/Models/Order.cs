@@ -14,7 +14,7 @@ namespace Orders.Models
             CustomerId = customerId;
             this.Id = Id;
             Status = OrderStatuses.CREATED;
-        }   
+        }
 
         public string Name { get; set; }
         public string Description { get; set; }
@@ -23,7 +23,8 @@ namespace Orders.Models
         public string Id { get; private set; }
         public OrderStatuses Status { get; set; }
     }
-    [Flags] //ALLOWS MULTIPLE VALUES FOR STATUSES
+
+    [Flags]
     public enum OrderStatuses
     {
         CREATED = 2,
